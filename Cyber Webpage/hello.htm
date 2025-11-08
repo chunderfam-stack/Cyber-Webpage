@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <p><script>document.write(new Date().toLocaleString())</script></p>
+    <br>
+    <style>
+        h1{
+            color:darkblue
+        }
+        em{
+            color:yellow;
+            background: gray;
+        }
+        strong{
+            color:purple
+        }
+        body{
+            font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            text-align: center;
+        }
+        button {
+        padding: 10px 20px;
+        font-size: 16px;
+        border: none;
+        cursor: pointer;
+        background-color: #3498db;
+        color: white;
+        transition: background-color 0.3s ease;
+        }
+
+        .active {
+        background-color: #e74c3c;
+        }
+
+        .wrapper{
+            box-shadow: 0 0 0 20px gray;
+            padding: 20px;
+        }
+        
+    </style>
+</head>
+<div class="wrapper">
+    <body>
+    <h1>About Me</h1>
+    <p>My name is Steven Ross but I go by my middle name, Will.</p>
+    <p>I like annoying fonts if you couldn't tell.</p>
+    <h2>Likes</h2>
+    <p>-<em>yellow</em></p>
+    <p>-making video games</p>
+    <p>-reading</p>
+    <p>-this bird</p>
+    <img src="YES.jpg" alt="The most beautiful bird" width="300" height="400">
+    <h2>Dislikes</h2>
+    <p>-<strong>purple</strong></p>
+    <p>-Seafood</p>
+    <p>-Hallmark Movies</p>
+    <br>
+    <h2>Achievements</h2>
+    <p>I've made quite a few videogames, none particularly great, but I'm still proud for making them.</p>
+    <br>
+    <p>Here's a few if you want to see what they are:</p>
+    <p><a href="https://qpagehms.org/FHSTSAGame2022/index.html">My first ever game!</a> It isn't very good.</p>
+    <a href="https://snazzy-chebakia-d94cf6.netlify.app/">Game that made it to state for a school competition!</a>
+    <br>
+    <a href="https://storied-empanada-3ea482.netlify.app/">Game I made in a day!</a>
+    <br>
+    <a href="https://fabulous-donut-44fb6e.netlify.app/">My most complicated game</a>
+    <br>
+    <a href="https://chunderfam.itch.io/sensory-overload">Game I made two weeks ago!</a>
+    <br>
+    <h1>Buttons</h1>
+    <button id="colorBtn" type="button">Red/Blue Button</button>
+    <script>const btn = document.getElementById('colorBtn');
+
+    btn.addEventListener('click', function () {
+      btn.classList.toggle('active');
+    });</script>
+    <br>
+    <br>
+    <button id="weewoo" type="button">constant flicker</button>
+    <script>const but = document.getElementById("weewoo");
+        const delay = ms => new Promise(res => setTimeout(res, ms));
+        but.addEventListener('click', async function (){
+            for(;;){
+                but.classList.toggle('active')
+                await delay(1000)
+            }
+        })
+    </script>
+    <br>
+    <br>
+    <button id="crashSite" type="button">Crash Site</button>
+    <script>const buton = document.getElementById("crashSite");
+        buton.addEventListener('click', function (){
+            for(;;){
+                buton.classList.toggle('active');
+            }
+        })
+    </script>
+    
+
+</body>
+</div>
+
+</html>
